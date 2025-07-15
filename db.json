@@ -1,0 +1,18 @@
+{
+  "students": [
+    {
+      "id": "35d0",
+      "name": "Moein Keramati",
+      "major": "Diplom",
+      "photo": "../Images/1.jpg",
+      "bio": "Daneshjoy Reshte Narm Afzar"
+    },
+    {
+      "id": "0df4",
+      "name": "Mohammad Rezaee",
+      "major": "Lisans",
+      "photo": "../Images/3.jpg",
+      "bio": "RIP"
+    }
+  ]
+}

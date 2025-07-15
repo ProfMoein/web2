@@ -1,0 +1,99 @@
+.studentdetail-bg {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e3f0ff 0%, #cde2ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.studentdetail-loading {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 1.2rem;
+  color: #183366;
+  font-weight: 600;
+}
+
+.studentdetail-card {
+  width: 500px;
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px #1a234034;
+  padding: 44px 32px 34px 32px;
+  text-align: center;
+  position: relative;
+  margin: 36px 0;
+  animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96) translateY(20px);}
+  to { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+.studentdetail-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #e6f0fe;
+  box-shadow: 0 2px 18px #2363eb22;
+  margin: 0 auto 18px auto;
+}
+
+.studentdetail-name {
+  font-size: 2rem;
+  color: #2363eb;
+  font-weight: 800;
+  margin-bottom: 7px;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 16px #2363eb13;
+}
+
+.studentdetail-major {
+  font-size: 1.1rem;
+  color: #7890bc;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+
+.studentdetail-bio {
+  color: #546482;
+  margin-bottom: 28px;
+  font-size: 1.07rem;
+  min-height: 46px;
+}
+
+.studentdetail-backbtn {
+  display: inline-block;
+  background: linear-gradient(90deg,#2363eb 60%, #78b5ff 100%);
+  color: #fff;
+  padding: 10px 36px;
+  border-radius: 11px;
+  font-weight: 700;
+  font-size: 1.03rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px #2363eb21;
+  transition: background 0.16s, transform 0.13s;
+  margin-top: 6px;
+}
+.studentdetail-backbtn:hover {
+  background: linear-gradient(90deg,#183366 40%, #42c5ff 100%);
+  transform: scale(1.07) translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .studentdetail-card {
+    padding: 27px 7px 19px 7px;
+    border-radius: 12px;
+  }
+  .studentdetail-photo { width: 74px; height: 74px; border-width: 3px; }
+  .studentdetail-name { font-size: 1.18rem; }
+  .studentdetail-backbtn { font-size: 0.97rem; padding: 9px 17px; }
+}

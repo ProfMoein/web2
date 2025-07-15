@@ -1,0 +1,67 @@
+return (
+  <section className="student-section">
+    <h2 className="student-title">Our Students</h2>
+
+    {/* This is your add/edit form — it should NOT be inside student-grid */}
+    <form className="student-form" onSubmit={editing ? handleUpdate : handleAdd}>
+      <input ... />
+      <input ... />
+      {/* ... other inputs ... */}
+      <button type="submit">{editing ? "Update" : "Add"}</button>
+      {editing && (
+        <button
+          type="button"
+          className="cancel-btn"
+          onClick={() => {
+            setEditing(false);
+            setForm({ name: "", major: "", photo: "", bio: "", id: null });
+          }}
+        >
+          Cancel
+        </button>
+      )}
+    </form>
+
+    <div className="student-grid">
+      {students.map((student) => (
+        <div
+          className="student-card"
+          key={student.id}
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate(`/students/${student.id}`)}
+        >
+          <div
+            className="student-photo"
+            style={{
+              backgroundImage: `url(${student.photo || "https://randomuser.me/api/portraits/lego/1.jpg"})`,
+            }}
+          />
+          <div className="student-content">
+            <h3>{student.name}</h3>
+            <div className="student-major">{student.major}</div>
+            <p>{student.bio}</p>
+            <div className="student-actions">
+              <button
+                onClick={e => {
+                  e.stopPropagation();
+                  handleEdit(student);
+                }}
+              >
+                Edit
+              </button>
+              <button
+                className="delete-btn"
+                onClick={e => {
+                  e.stopPropagation();
+                  handleDelete(student.id);
+                }}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+);

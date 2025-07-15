@@ -1,0 +1,106 @@
+.teacher-section {
+  max-width: 1150px;
+  margin: 56px auto;
+  padding: 0 18px;
+}
+
+.teacher-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 36px;
+  color: #2363eb;
+  letter-spacing: -1px;
+  text-shadow: 0 3px 12px #2363eb18;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 32px;
+}
+
+.teacher-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 28px #1a234026;
+  overflow: hidden;
+  transition: transform 0.16s, box-shadow 0.19s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.teacher-card:hover {
+  transform: translateY(-7px) scale(1.035);
+  box-shadow: 0 8px 40px #2363eb2d;
+}
+
+.teacher-photo {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 4px solid #e6f0fe;
+  box-shadow: 0 2px 14px #2363eb22;
+  margin-bottom: 16px;
+}
+
+.teacher-content {
+  padding: 0 20px 18px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teacher-content h3 {
+  margin: 0 0 7px 0;
+  font-size: 1.21rem;
+  color: #183366;
+  font-weight: 700;
+  text-align: center;
+}
+
+.teacher-role {
+  color: #5472b3;
+  font-size: 0.99rem;
+  font-style: italic;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.teacher-content p {
+  color: #546482;
+  margin: 0 0 16px 0;
+  font-size: 0.99rem;
+  text-align: center;
+  flex: 1;
+}
+
+.teacher-btn {
+  background: linear-gradient(90deg,#2363eb 60%, #78b5ff 100%);
+  color: #fff;
+  padding: 7px 24px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #2363eb24;
+  transition: background 0.15s, transform 0.13s, box-shadow 0.17s;
+  margin-top: 12px;
+  text-align: center;
+}
+.teacher-btn:hover {
+  background: linear-gradient(90deg,#183366 40%, #42c5ff 100%);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 26px #2363eb22;
+}
+
+@media (max-width: 650px) {
+  .teacher-title { font-size: 1.23rem; }
+  .teacher-content h3 { font-size: 1.05rem; }
+  .teacher-card { border-radius: 11px; }
+  .teacher-photo { width: 66px; height: 66px; }
+}

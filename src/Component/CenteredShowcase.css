@@ -1,0 +1,15 @@
+
+.centered-showcase-bg {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+}
+
+.centered-showcase-wrapper {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
